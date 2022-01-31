@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started: Serving Web Content</title>
+<style>
+ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 0; /*убираем отступы*/
+  margin-top:25px; /*делаем отступ сверху*/
+}
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#30A8E6; /*добавляем фон к пункту меню*/
+  color:#fff; /*меняем цвет ссылок*/
+  padding:10px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  border-radius:4px; /*добавляем скругление*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+a:hover {
+  background:#1C85BB;/*добавляем эффект при наведении*/
+}
+li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+  margin-right:5px; /*Добавляем отступ у пунктов меню*/
+}
+body{
+background-color: #D4E6B3;
+}
+#subscribe{
+    top: 20px;
+    width: 88%;
+    padding: 18px 6% 60px 6%;
+    margin: 0 0 45px 0;
+    background: rgb(247, 247, 247);
+    border: 1px solid rgba(147, 184, 189,0.8);
+    box-shadow:
+        0pt 2px 5px rgba(105, 108, 109,  0.7),
+        0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+    border-radius: 5px;
+}
+#subscribe{
+    z-index: 22;
+}
+#wrapper h1{
+    font-size: 48px;
+    color: rgb(6, 106, 117);
+    padding: 2px 0 10px 0;
+    font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+}
+#wrapper h1{
+    background:
+    -webkit-repeating-linear-gradient(-45deg,
+        rgb(18, 83, 93) ,
+        rgb(18, 83, 93) 20px,
+        rgb(64, 111, 118) 20px,
+        rgb(64, 111, 118) 40px,
+        rgb(18, 83, 93) 40px);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+#wrapper h1:after{
+    content:' ';
+    display:block;
+    width:100%;
+    height:2px;
+    margin-top:10px;
+    background:
+        linear-gradient(left,
+            rgba(147,184,189,0) 0%,
+            rgba(147,184,189,0.8) 20%,
+            rgba(147,184,189,1) 53%,
+            rgba(147,184,189,0.8) 79%,
+            rgba(147,184,189,0) 100%);
+}
+</style>
+</head>
+<body>
+<ul>
+    <li><a href="home">Главная станица</a></li>
+    <li><a href="registration">Регистрация</a></li>
+    <li><a href="authorization">Вход</a></li><br />
+</ul>
+<div class="container mt-5 mb-5">
+    <h1>Регистрация пользователя</h1>
+    <form action="/registration" method="post">
+        <input type="text" name="login" placeholder="Введите логин" class="form-control"><br>
+        <input type="text" name="password" placeholder="Введите пароль" class="form-control"><br>
+        <button type="submit" class="btn btn-success">Создать аккаунт</button>
+    </form>
+</div>
+</body>
+</html>

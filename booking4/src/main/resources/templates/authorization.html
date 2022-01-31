@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 0; /*убираем отступы*/
+  margin-top:25px; /*делаем отступ сверху*/
+}
+a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#30A8E6; /*добавляем фон к пункту меню*/
+  color:#fff; /*меняем цвет ссылок*/
+  padding:10px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  border-radius:4px; /*добавляем скругление*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+a:hover {
+  background:#1C85BB;/*добавляем эффект при наведении*/
+}
+li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+  margin-right:5px; /*Добавляем отступ у пунктов меню*/
+}
+body{
+background-color: #D4E6B3;
+}
+
+</style>
+</head>
+<body>
+<ul>
+    <li><a href="home">Главная станица</a></li>
+    <li><a href="registration">Регистрация</a></li>
+    <li><a href="authorization">Вход</a></li>
+</ul>
+<div class="container mt-5 mb-5">
+    <h1>Вход</h1>
+    <form action="/authorization" method="post">
+        <input type="text" name="login" placeholder="Введите логин" class="form-control"><br>
+        <input type="text" name="password" placeholder="Введите пароль" class="form-control"><br>
+        <button type="submit" class="btn btn-success">Войти в аккаунт</button>
+    </form>
+</div>
+</body>
+</html>
